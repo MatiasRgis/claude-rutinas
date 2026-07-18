@@ -2,6 +2,18 @@
 
 Tres workflows de ComfyUI basados en **Custom Character Creator 4.0 Simple** (Mickmumpitz), con prompts y vestuario ajustados a cada plataforma. El objetivo es generar material **consistente en identidad** y **diverso en escena** para entrenar LoRAs.
 
+## Como verificar que cargaste el archivo correcto
+
+Al abrir el workflow en ComfyUI, el titulo grande del canvas debe decir uno de:
+
+- `INSTAGRAM DATASET — CCC 4.0`
+- `ONLYFANS DATASET — CCC 4.0 (EXPLICIT OK)`
+- `PORNPICS DATASET — CCC 4.0 (NUDE EXPLICIT)`
+
+Si sigue diciendo solo `CONSISTENT CHARACTER CREATOR 4.0`, estas abriendo el workflow original, no estos archivos.
+
+Ruta en el repo: `comfyui-workflows/lora-datasets/CCC4_SMPL_dataset_<plataforma>.json`
+
 ## Archivos
 
 | Plataforma | Workflow | Carpeta dataset | Nombre personaje |

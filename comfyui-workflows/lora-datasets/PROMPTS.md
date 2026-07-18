@@ -1,18 +1,14 @@
 # LoRA Dataset Workflows — Platform Prompt Map
 
-`CLOTHES` is a **global outfit** appended to every scene prompt (`style + prompt + clothes`). Use it to lock one specific look for the dataset. Scene prompts may override for special shots.
+> Si al abrir el workflow el titulo grande dice `INSTAGRAM DATASET`, `ONLYFANS DATASET` o `PORNPICS DATASET`, estas en el archivo correcto.
 
-| Platform | Workflow file | Root folder | Character name | CLOTHES |
-|---|---|---|---|---|
-| instagram | `CCC4_SMPL_dataset_instagram.json` | `CCC_instagram` | `v3v3_ig` | `wearing a specific Instagram outfit: high-waisted light-wash jeans, cream silk camisole, gold hoop earrings, clean white sneakers` |
-| onlyfans | `CCC4_SMPL_dataset_onlyfans.json` | `CCC_onlyfans` | `v3v3_of` | `wearing a specific OnlyFans outfit: sheer black lace bra and matching panties, open silk robe slipping off one shoulder` |
-| pornpics | `CCC4_SMPL_dataset_pornpics.json` | `CCC_pornpics` | `v3v3_pp` | `nude` |
+`CLOTHES` es el **atuendo global** (se concatena a cada escena). Usalo para lockear un outfit del dataset.
 
-## INSTAGRAM
+## INSTAGRAM (`CCC_instagram` / `v3v3_ig`)
+
+**CLOTHES:** `high-waisted light-wash jeans, cream silk camisole, gold hoop earrings, clean white sneakers`
 
 **STYLE:** A beautiful 35-year-old woman, slim with blue eyes, natural and small breasts, soft glam makeup, healthy glowing skin, influencer aesthetic
-
-**CLOTHES (global):** wearing a specific Instagram outfit: high-waisted light-wash jeans, cream silk camisole, gold hoop earrings, clean white sneakers
 
 ### `T-POSE`
 
@@ -190,11 +186,11 @@ Back view of the character overlooking a national park canyon at late afternoon.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
-## ONLYFANS
+## ONLYFANS (`CCC_onlyfans` / `v3v3_of`)
+
+**CLOTHES:** `sheer black lace bra and matching panties, open silk robe slipping off one shoulder`
 
 **STYLE:** A beautiful 35-year-old woman, slim with blue eyes, natural and small breasts, soft skin, intimate bedroom creator aesthetic, flirty and personal
-
-**CLOTHES (global):** wearing a specific OnlyFans outfit: sheer black lace bra and matching panties, open silk robe slipping off one shoulder
 
 ### `T-POSE`
 
@@ -372,11 +368,11 @@ Back-to-mirror boudoir: the character faces a large mirror, looking at her refle
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
-## PORNPICS
+## PORNPICS (`CCC_pornpics` / `v3v3_pp`)
+
+**CLOTHES:** `nude`
 
 **STYLE:** A beautiful 35-year-old woman, slim with blue eyes, natural and small breasts, smooth skin, erotic photography model, explicit adult glamour
-
-**CLOTHES (global):** nude
 
 ### `T-POSE`
 
