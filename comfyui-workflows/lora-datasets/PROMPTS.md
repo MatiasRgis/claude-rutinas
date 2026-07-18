@@ -1,20 +1,18 @@
 # LoRA Dataset Workflows — Platform Prompt Map
 
-Three ComfyUI workflows derived from Mickmumpitz CCC 4.0 Simple, retargeted for platform-specific LoRA datasets.
+`CLOTHES` is a **global outfit** appended to every scene prompt (`style + prompt + clothes`). Use it to lock one specific look for the dataset. Scene prompts may override for special shots.
 
-| Platform | Workflow file | Root folder | Character name |
-|---|---|---|---|
-| instagram | `CCC4_SMPL_dataset_instagram.json` | `CCC_instagram` | `v3v3_ig` |
-| onlyfans | `CCC4_SMPL_dataset_onlyfans.json` | `CCC_onlyfans` | `v3v3_of` |
-| pornpics | `CCC4_SMPL_dataset_pornpics.json` | `CCC_pornpics` | `v3v3_pp` |
-
-Identity locks kept on every platform: **T-POSE, SIDE-WALK, BACK-VIEW, CLOSE-FRONT, CLOSE-PROFILE**, plus expression/lighting coverage.
+| Platform | Workflow file | Root folder | Character name | CLOTHES |
+|---|---|---|---|---|
+| instagram | `CCC4_SMPL_dataset_instagram.json` | `CCC_instagram` | `v3v3_ig` | `wearing a specific Instagram outfit: high-waisted light-wash jeans, cream silk camisole, gold hoop earrings, clean white sneakers` |
+| onlyfans | `CCC4_SMPL_dataset_onlyfans.json` | `CCC_onlyfans` | `v3v3_of` | `wearing a specific OnlyFans outfit: sheer black lace bra and matching panties, open silk robe slipping off one shoulder` |
+| pornpics | `CCC4_SMPL_dataset_pornpics.json` | `CCC_pornpics` | `v3v3_pp` | `nude` |
 
 ## INSTAGRAM
 
 **STYLE:** A beautiful 35-year-old woman, slim with blue eyes, natural and small breasts, soft glam makeup, healthy glowing skin, influencer aesthetic
 
-**CLOTHES:** stylish Instagram fashion: high-waisted light-wash jeans, cream silk camisole, gold hoop earrings, clean sneakers, elevated casual chic
+**CLOTHES (global):** wearing a specific Instagram outfit: high-waisted light-wash jeans, cream silk camisole, gold hoop earrings, clean white sneakers
 
 ### `T-POSE`
 
@@ -104,7 +102,7 @@ Show this exact character from the reference image. Match style, skin tone, hair
 ### `RESORT-POOL`
 
 ```
-The character lounges on the edge of a luxury resort infinity pool in a tasteful one-piece swimsuit, legs in the water, hair wet and slicked back. Bright midday sun, turquoise water, palm reflections. Full body visible, vacation Instagram aesthetic. No nudity.
+Override clothes for this shot only: tasteful one-piece swimsuit. The character lounges on the edge of a luxury resort infinity pool, legs in the water, hair wet and slicked back. Bright midday sun, turquoise water, palm reflections. Full body visible, vacation Instagram aesthetic. No nudity.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
@@ -167,14 +165,14 @@ Show this exact character from the reference image. Match style, skin tone, hair
 ### `ROOFTOP-PARTY`
 
 ```
-Medium shot on a stylish rooftop party at dusk: the character holds a sparkling drink, city lights blooming behind her. Soft string lights, elegant evening outfit vibe, candid social smile. Tasteful nightlife, not club smut.
+Medium shot on a stylish rooftop party at dusk: the character holds a sparkling drink, city lights blooming behind her. Soft string lights, candid social smile. Tasteful nightlife, not club smut.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `FITNESS-RUN`
 
 ```
-Medium close-up of the character mid-run on a waterfront boardwalk at sunrise. Dynamic running pose, athletic wear, wind in hair, pink-orange sky. Fitness influencer energy, focused expression.
+Override clothes for this shot only: fitted athletic sportswear. Medium close-up of the character mid-run on a waterfront boardwalk at sunrise. Dynamic running pose, wind in hair, pink-orange sky. Fitness influencer energy, focused expression.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
@@ -188,7 +186,7 @@ Show this exact character from the reference image. Match style, skin tone, hair
 ### `TRAVEL-CANYON`
 
 ```
-Back view of the character overlooking a national park canyon at late afternoon. Arms raised above her head in a triumphant stretch. Hiking-chic outfit, vast landscape, travel content energy.
+Back view of the character overlooking a national park canyon at late afternoon. Arms raised above her head in a triumphant stretch. Vast landscape, travel content energy.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
@@ -196,7 +194,7 @@ Show this exact character from the reference image. Match style, skin tone, hair
 
 **STYLE:** A beautiful 35-year-old woman, slim with blue eyes, natural and small breasts, soft skin, intimate bedroom creator aesthetic, flirty and personal
 
-**CLOTHES:** intimate OnlyFans look: sheer black lace bra and matching panties, open silk robe slipping off one shoulder, bare legs, teasing but personal
+**CLOTHES (global):** wearing a specific OnlyFans outfit: sheer black lace bra and matching panties, open silk robe slipping off one shoulder
 
 ### `T-POSE`
 
@@ -244,7 +242,7 @@ Show this exact character from the reference image. Match style, skin tone, hair
 ### `BACKLIT-ROBE`
 
 ```
-Medium close-up: strong backlight from a bright window turns the character into a soft silhouette with glowing edges. She wears an open robe and looks down with closed eyes, quiet and sensual. Bedroom morning mood.
+Medium close-up: strong backlight from a bright window turns the character into a soft silhouette with glowing edges. Open robe, eyes closed, quiet and sensual. Bedroom morning mood.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
@@ -286,91 +284,91 @@ Show this exact character from the reference image. Match style, skin tone, hair
 ### `OUTDOOR-SUNBED`
 
 ```
-The character reclines on a private villa sunbed in tiny string bikini, skin glistening with oil, tropical plants behind her. Hot sunlight, teasing stretched pose, looking at camera. Explicitly sexy vacation content, adult creator vibe.
+Override clothes for this shot: tiny string bikini being pulled aside. The character reclines on a private villa sunbed, skin glistening with oil, and uses her fingers to pull the bikini bottom to the side, revealing the top of her vagina and pubic area. Hot sunlight, explicit vacation OnlyFans content, looking at camera.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `COUCH-TEASE`
 
 ```
-Wide-enough living room shot: the character lounges on a couch in lingerie, one knee up, scrolling a phone, glancing at camera with a knowing smile. Soft lamp light, private apartment atmosphere.
+Wide-enough living room shot: the character lounges on a couch, panties slid down to mid-thigh, robe open, one knee up. She casually shows the beginning of her vagina to the camera with a knowing smile. Soft lamp light, private apartment, explicit tease.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `DESK-LINGERIE`
 
 ```
-Medium shot: the character sits on a home-office desk edge in lingerie and heels, leaning toward the webcam/camera with a teasing expression. Laptop open beside her. Creator-at-work aesthetic.
+Medium shot: the character sits on a home-office desk edge in lingerie and heels, leaning toward the camera. With one hand she pulls her panties aside just enough to expose the start of her pussy lips. Laptop open beside her. Explicit creator-at-work aesthetic.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `MORNING-COFFEE`
 
 ```
-Close-up of the character's hands holding a steaming mug against her chest, cleavage softly visible in an open robe. Morning bedroom bokeh behind her. Intimate detail shot, warm tones.
+Close-up of the character's hands holding a steaming mug against her chest, open robe, soft cleavage. Morning bedroom bokeh behind her. Intimate detail shot, warm tones.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
-### `BED-LINGERIE`
+### `BED-EXPLICIT`
 
 ```
-High-ish frontal shot of the character lying on her stomach on rumpled white sheets in lace lingerie, chin on hands, feet kicked up behind her. Moody evening lamps. Soft teasing eye contact.
+Frontal shot of the character on rumpled white sheets, bra off, panties pulled down around her knees. She spreads her thighs slightly and shows the beginning of her vagina to camera, soft teasing eye contact. Moody evening lamps. Explicit OnlyFans bed content.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `BATHTUB-STEAM`
 
 ```
-Medium shot: the character in a steamy bathtub, water to her chest, wet hair, arms resting on the tub edge, looking at camera through soft steam. Candlelight reflections. Intimate bath content.
+Medium shot: the character in a steamy bathtub, water low enough that her bare breasts and the top of her vagina are visible above the waterline, wet hair, arms on the tub edge, looking at camera through soft steam. Explicit intimate bath content.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
-### `FLOOR-TEASE`
+### `STRIPTEASE`
 
 ```
-Low angle full-body leaning shot: the character kneels on a soft rug in lingerie, looking down toward the camera with a dominant teasing smile. Soft practical lights, private apartment. Full body visible.
+Striptease sequence pose: low angle full-body shot. The character is mid-undress — bra unclasped and falling, panties being slid down her hips with both hands, revealing bare breasts and the start of her vagina. Looking down at the camera with a dominant teasing smile. Soft practical lights, private apartment. Explicit.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `BED-OVERHEAD`
 
 ```
-High angle shot looking down at the character lying on a bed in lingerie, surprised playful expression with open mouth as if caught mid-laugh. Sheets messy. Clear overhead perspective change.
+High angle shot looking down at the character lying on a bed, surprised playful expression with open mouth. Lingerie half-off: one breast bare, panties tugged to the side exposing the beginning of her vagina. Sheets messy. Clear overhead perspective. Explicit.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `BALCONY-NIGHT`
 
 ```
-Full body night balcony shot: the character looks upward, hands on the railing, city lights below. Sheer robe moving in the breeze, dramatic cool/warm mixed lighting. FULL BODY VISIBLE.
+Full body night balcony shot: the character looks upward, hands on the railing, city lights below. Sheer robe open, panties pulled down slightly so the top of her vagina is visible. Dramatic cool/warm mixed lighting. FULL BODY VISIBLE. Explicit tease.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `HOTEL-SUITE`
 
 ```
-Medium shot in a luxury hotel suite: the character sits on the edge of a wide bed holding a glass of champagne in lingerie, neon city color washing through curtains. Candid seductive pose, upper body emphasis.
+Medium shot in a luxury hotel suite: the character sits on the edge of a wide bed holding champagne. She is undressing — robe off, bra discarded beside her, panties hooked by a thumb and dragged down to show the start of her pussy. Neon city color through curtains. Explicit seductive pose.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
-### `SHOWER-GLASS`
+### `SHOWER-EXPLICIT`
 
 ```
-Medium close-up through fogged shower glass: the character rinses her hair under the shower, skin wet, looking toward camera through droplets. Steamy intimate bathroom lighting.
+Medium close-up through fogged shower glass: the character rinses her hair under the shower, fully nude and wet, one leg lifted so the beginning of her vagina is faintly visible through droplets and steam. Explicit intimate bathroom lighting.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `CAR-BACKSEAT`
 
 ```
-Wide night shot: the character lounges across a car back seat with the door open, lingerie under a coat half-off, streetlights and wet asphalt reflections. Risky private tease, cinematic.
+Wide night shot: the character lounges across a car back seat with the door open, coat open, lingerie half-removed. Legs parted just enough to show the top of her vagina, streetlights and wet asphalt reflections. Risky explicit private content, cinematic.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `MIRROR-BOUDOIR`
 
 ```
-Back view boudoir mirror composition: the character faces a large mirror, looking at her own reflection, hands lifting her hair, lingerie visible from behind. Warm vanity lights. Arms raised, intimate self-admiration.
+Back-to-mirror boudoir: the character faces a large mirror, looking at her reflection while pulling her panties down from behind, bare ass and a hint of her vagina visible between her thighs. Warm vanity lights, arms busy with the undress. Explicit self-admiration.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
@@ -378,7 +376,7 @@ Show this exact character from the reference image. Match style, skin tone, hair
 
 **STYLE:** A beautiful 35-year-old woman, slim with blue eyes, natural and small breasts, smooth skin, erotic photography model, explicit adult glamour
 
-**CLOTHES:** nude adult photography: fully nude, bare breasts and hips visible, no clothing except optional thin jewelry, explicit erotic posing
+**CLOTHES (global):** nude
 
 ### `T-POSE`
 
@@ -417,7 +415,7 @@ Show this exact character from the reference image. Match style, skin tone, hair
 ### `CLOSE-PROFILE`
 
 ```
-Extreme close-up side profile of the nude character's head and bare shoulders against plain white. 90-degree left profile, neutral expression. Head and shoulders fill the frame. Clean studio light.
+Extreme close-up side profile of the character's head and bare shoulders against plain white. 90-degree left profile, neutral expression. Head and shoulders fill the frame. Clean studio light.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
@@ -452,104 +450,104 @@ Show this exact character from the reference image. Match style, skin tone, hair
 ### `STUDIO-NUDE`
 
 ```
-Full body erotic studio shot: the nude character stands in a classic hand-on-hip glamour pose on seamless paper, three-point lighting, explicit frontal nudity, confident eye contact. PornPics-style clean set photo.
+Full body erotic studio shot: the nude character stands in a classic hand-on-hip glamour pose on seamless paper, three-point lighting, explicit frontal nudity including breasts and vagina, confident eye contact. PornPics-style clean set photo.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `CHAISE-NUDE`
 
 ```
-The nude character reclines on a velvet chaise lounge, one knee bent, arm behind her head, explicit body display. Soft window light and warm interior. Full body erotic furniture pose.
+The nude character reclines on a velvet chaise lounge, one knee bent, arm behind her head, explicit body display including vagina. Soft window light and warm interior. Full body erotic furniture pose.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `BEACH-NUDE`
 
 ```
-The nude character sits on a beach rock at the waterline, fully nude and wet, waves splashing behind her. Sunlit explicit outdoor nudity, looking at camera. Adult beach set photography.
+The nude character sits on a beach rock at the waterline, fully nude and wet, vagina visible, waves splashing behind her. Sunlit explicit outdoor nudity, looking at camera. Adult beach set photography.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `OUTDOOR-NUDE`
 
 ```
-Wide erotic outdoor shot: the nude character sits on a secluded park bench in dappled light, legs crossed, openly nude. Soft nature bokeh. Explicit candid adult photography look.
+Wide erotic outdoor shot: the nude character sits on a secluded park bench in dappled light, legs crossed then slightly parted, openly nude with vagina visible. Soft nature bokeh. Explicit candid adult photography look.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `DESK-NUDE`
 
 ```
-Medium erotic shot: the nude character sits on a marble office desk, legs parted slightly, looking at her watch then toward camera. City skyline through windows at midday. Explicit desk glamour set.
+Medium erotic shot: the nude character sits on a marble office desk, legs parted slightly showing her vagina, looking toward camera. City skyline through windows at midday. Explicit desk glamour set.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `HANDS-BODY`
 
 ```
-Close-up detail of the nude character's hands sliding over her own waist and hip, skin and body filling most of the frame, face softly out of focus in background. Explicit body-detail dataset shot.
+Close-up detail of the nude character's hands sliding over her own waist, hip and the top of her vagina, skin and body filling most of the frame, face softly out of focus in background. Explicit body-detail dataset shot.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `BED-EXPLICIT`
 
 ```
-Frontal high angle of the nude character lying relaxed on a hotel bed, eyes closed, one arm above her head, explicit breasts and torso visible. Dark moody evening lighting. Classic adult bed set.
+Frontal high angle of the nude character lying relaxed on a hotel bed, eyes closed, one arm above her head, explicit breasts and vagina visible. Dark moody evening lighting. Classic adult bed set.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `SHOWER-NUDE`
 
 ```
-Medium shot of the nude character in a modern glass shower, water streaming over her body, one hand on the glass, erotic wet look, steamy bathroom. Explicit shower set photography.
+Medium shot of the nude character in a modern glass shower, water streaming over her body, one hand on the glass, vagina visible, erotic wet look, steamy bathroom. Explicit shower set photography.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `ARCHED-POSE`
 
 ```
-Full body low-angle erotic pose: the nude character arches on all fours on a clean floor / low platform looking back toward camera. Dramatic upward perspective, studio lighting. Explicit arched pose.
+Full body low-angle erotic pose: the nude character arches on all fours on a clean floor looking back toward camera, vagina and ass visible. Dramatic upward perspective, studio lighting. Explicit arched pose.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `SPREAD-ANGLE`
 
 ```
-High angle wide shot of the nude character on the floor looking up surprised with an open mouth. Explicit body layout clearly visible from above. Strong perspective change for dataset variety.
+High angle wide shot of the nude character on the floor looking up surprised with an open mouth, legs open enough to show her vagina. Explicit body layout clearly visible from above. Strong perspective change for dataset variety.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `STANDING-NUDE`
 
 ```
-Full body wide shot of the nude character standing outdoors looking up into open sky, hands on hips, dramatic clouds. Explicit standing nude, shoes optional but feet visible. FULL BODY VISIBLE.
+Full body wide shot of the nude character standing outdoors looking up into open sky, hands on hips, vagina visible, dramatic clouds. Explicit standing nude, feet visible. FULL BODY VISIBLE.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `NEON-NUDE`
 
 ```
-Medium erotic shot: the nude character leans against a neon-lit private lounge wall holding a drink, colored gels on skin, dark background. Explicit upper-body-forward adult nightlife set.
+Medium erotic shot: the nude character leans against a neon-lit private lounge wall holding a drink, colored gels on skin, dark background, breasts and vagina visible. Explicit adult nightlife set.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `WETLOOK-NUDE`
 
 ```
-Medium close-up of the nude character in a dynamic wetlook pose after rain at an abandoned industrial site at dusk, body glistening, last red glow on the horizon. Explicit, cinematic, dangerous mood.
+Medium close-up of the nude character in a dynamic wetlook pose after rain at an abandoned industrial site at dusk, body glistening, vagina visible, last red glow on the horizon. Explicit, cinematic, dangerous mood.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `HOOD-CAR-NUDE`
 
 ```
-Wide night erotic shot: the nude character leans back on a car hood, legs extended, city lights and clean reflections on the paint. Explicit automotive glamour set.
+Wide night erotic shot: the nude character leans back on a car hood, legs open, vagina visible, city lights and clean reflections on the paint. Explicit automotive glamour set.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```
 
 ### `OUTDOOR-BACK`
 
 ```
-Back view of the nude character overlooking a canyon, arms raised high above her head, explicit rear nude against vast landscape. Late-day warm light. Adult outdoor back pose.
+Back view of the nude character overlooking a canyon, arms raised high above her head, explicit rear nude with vagina hint between thighs against vast landscape. Late-day warm light. Adult outdoor back pose.
 Show this exact character from the reference image. Match style, skin tone, hairstyle, facial structure and body proportions exactly. Do not change the character's identity. Keep the character perfectly consistent.
 ```

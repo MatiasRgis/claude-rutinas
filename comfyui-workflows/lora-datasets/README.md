@@ -16,24 +16,27 @@ Mapa completo de prompts: [`PROMPTS.md`](./PROMPTS.md)
 
 1. Carga el `.json` en ComfyUI (mismos custom nodes/modelos que CCC 4.0 Simple).
 2. Pon tu **imagen de referencia** en INPUTS.
-3. Ajusta `STYLE` / `CLOTHES` si quieres, pero cada workflow ya trae defaults de plataforma.
-4. Cambia `NAME (CHARACTER)` si entrenas varios personajes; deja el `ROOT FOLDER` para no mezclar datasets.
-5. Genera las passes y etiqueta después con tu workflow de tagging habitual.
+3. **`STYLE`** = descripción del personaje. **`CLOTHES`** = atuendo global opcional (se concatena a *todos* los prompts). Úsalo cuando quieras lockear un outfit específico para el dataset (típicamente Instagram / OnlyFans). En PornPics va `nude`.
+4. Algunas escenas pueden *override* el outfit (ej. traje de baño en IG, striptease explícito en OF).
+5. Cambia `NAME (CHARACTER)` si entrenas varios personajes; deja el `ROOT FOLDER` para no mezclar datasets.
+6. Genera las passes y etiqueta después con tu workflow de tagging habitual.
 
 ## Qué cambia entre plataformas
 
 ### Instagram (`v3v3_ig`)
 - Estética lifestyle / influencer, **SFW**.
-- Moda casual chic, brunch, rooftop, resort, fitness, travel.
+- `CLOTHES`: outfit IG específico (jeans + camisole, etc.).
+- Escenas: brunch, rooftop, resort, fitness, travel.
 - Ideal para un LoRA “público” o feed.
 
 ### OnlyFans (`v3v3_of`)
-- Estética íntima de creadora: lencería, bata, cama, bañera, suite.
-- Teasing / boudoir, tono personal y privado.
-- Ideal para un LoRA de contenido suscripción.
+- Estética íntima de creadora + **contenido explícito**.
+- `CLOTHES`: lencería/bata como base; varias escenas la quitan (striptease, panties aside, mostrando el inicio de la vagina, etc.).
+- Escenas: cama, bañera, suite, couch tease, undressing.
+- Ideal para un LoRA de contenido suscripción (tease → explícito).
 
 ### PornPics (`v3v3_pp`)
-- Fotografía adulta explícita: desnudo de estudio y sets eróticos.
+- Fotografía adulta explícita; `CLOTHES`: `nude`.
 - Poses de glamour hard, outdoor nude, cama, ducha, coche.
 - Ideal para un LoRA explícito de galería.
 
