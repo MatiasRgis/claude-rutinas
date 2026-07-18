@@ -1,75 +1,49 @@
 # CCC 4.0 Simple — Datasets por plataforma (LoRA)
 
-Tres workflows de ComfyUI basados en **Custom Character Creator 4.0 Simple** (Mickmumpitz), con prompts y vestuario ajustados a cada plataforma. El objetivo es generar material **consistente en identidad** y **diverso en escena** para entrenar LoRAs.
+Tres workflows de ComfyUI basados en **Custom Character Creator 4.0 Simple** (Mickmumpitz).
 
 ## Como verificar que cargaste el archivo correcto
 
-Al abrir el workflow en ComfyUI, el titulo grande del canvas debe decir uno de:
+El titulo grande del canvas debe decir:
 
 - `INSTAGRAM DATASET — CCC 4.0`
 - `ONLYFANS DATASET — CCC 4.0 (EXPLICIT OK)`
 - `PORNPICS DATASET — CCC 4.0 (NUDE EXPLICIT)`
 
-Si sigue diciendo solo `CONSISTENT CHARACTER CREATOR 4.0`, estas abriendo el workflow original, no estos archivos.
+Branch: `cursor/platform-lora-datasets-51ac`  
+Carpeta: `comfyui-workflows/lora-datasets/`
 
-Ruta en el repo: `comfyui-workflows/lora-datasets/CCC4_SMPL_dataset_<plataforma>.json`
+## CLOTHES (importante)
+
+El campo **CLOTHES está vacío a propósito**.
+
+En CCC, `CLOTHES` se concatena a *todas* las escenas. Si lo llenas, **todas las imagenes salen con la misma ropa** y bajas la variedad del LoRA.
+
+- Deja `CLOTHES` vacio para diversidad.
+- La ropa / estado de desnudez va **dentro de cada prompt de escena** (cada pass es distinta).
+- Solo rellena `CLOTHES` si quieres entrenar un atuendo fijo a proposito.
 
 ## Archivos
 
-| Plataforma | Workflow | Carpeta dataset | Nombre personaje |
+| Plataforma | Workflow | Root | Name |
 |---|---|---|---|
 | Instagram | `CCC4_SMPL_dataset_instagram.json` | `CCC_instagram` | `v3v3_ig` |
 | OnlyFans | `CCC4_SMPL_dataset_onlyfans.json` | `CCC_onlyfans` | `v3v3_of` |
 | PornPics | `CCC4_SMPL_dataset_pornpics.json` | `CCC_pornpics` | `v3v3_pp` |
 
-Mapa completo de prompts: [`PROMPTS.md`](./PROMPTS.md)
+Mapa de prompts: [`PROMPTS.md`](./PROMPTS.md)
 
-## Cómo usar
+## Contenido por plataforma
 
-1. Carga el `.json` en ComfyUI (mismos custom nodes/modelos que CCC 4.0 Simple).
-2. Pon tu **imagen de referencia** en INPUTS.
-3. **`STYLE`** = descripción del personaje. **`CLOTHES`** = atuendo global opcional (se concatena a *todos* los prompts). Úsalo cuando quieras lockear un outfit específico para el dataset (típicamente Instagram / OnlyFans). En PornPics va `nude`.
-4. Algunas escenas pueden *override* el outfit (ej. traje de baño en IG, striptease explícito en OF).
-5. Cambia `NAME (CHARACTER)` si entrenas varios personajes; deja el `ROOT FOLDER` para no mezclar datasets.
-6. Genera las passes y etiqueta después con tu workflow de tagging habitual.
+### Instagram
+Lifestyle SFW con **ropa distinta por escena** (jeans, trench, yoga set, swimsuit, blazer, running gear, etc.).
 
-## Qué cambia entre plataformas
+### OnlyFans
+Intimo + **explicito**: lenceria variada, striptease, panties aside, mostrando el inicio de la vagina, etc. Ropa/estado distinto por escena.
 
-### Instagram (`v3v3_ig`)
-- Estética lifestyle / influencer, **SFW**.
-- `CLOTHES`: outfit IG específico (jeans + camisole, etc.).
-- Escenas: brunch, rooftop, resort, fitness, travel.
-- Ideal para un LoRA “público” o feed.
+### PornPics
+Sets explicitos mayormente nude, con pequena variedad (heels, boots, waist chain, barefoot).
 
-### OnlyFans (`v3v3_of`)
-- Estética íntima de creadora + **contenido explícito**.
-- `CLOTHES`: lencería/bata como base; varias escenas la quitan (striptease, panties aside, mostrando el inicio de la vagina, etc.).
-- Escenas: cama, bañera, suite, couch tease, undressing.
-- Ideal para un LoRA de contenido suscripción (tease → explícito).
+## Identidad LoRA
 
-### PornPics (`v3v3_pp`)
-- Fotografía adulta explícita; `CLOTHES`: `nude`.
-- Poses de glamour hard, outdoor nude, cama, ducha, coche.
-- Ideal para un LoRA explícito de galería.
-
-## Qué se mantiene igual (importante para LoRA)
-
-En los tres workflows se conservan las passes de **identidad y geometría**:
-
-- `T-POSE` / `SIDE-WALK` / `BACK-VIEW`
-- `CLOSE-FRONT` / `CLOSE-PROFILE`
-- Variaciones de expresión (`CLOSE-SMILE`, `CLOSE-SAD`, `CLOSE-ANGRY`)
-- Cobertura de iluminación / ángulos
-
-Cada prompt incluye un bloque de **identity lock** para no derivar cara/cuerpo respecto a la referencia.
-
-## Recomendación de entrenamiento
-
-- Entrena **un LoRA por plataforma** si quieres estilos muy distintos, **o**
-- Mezcla los tres datasets (con captions claros) si quieres un LoRA versátil con el mismo rostrocuerpo.
-- Mantén la misma referencia base en los tres runs para máxima consistencia facial.
-- Tras generar, usa tu pipeline de tagging; no está incluido en estos graphs (variant Simple).
-
-## Origen
-
-Derivado de `260713_MICKMUMPITZ_CCC_4-0_SMPL_2084.json`. Solo se retargetearon prompts, `STYLE`, `CLOTHES`, nombres de escena y rutas de salida; la cadena de modelos/nodos es la misma.
+Se mantienen passes de identidad: T-POSE, SIDE/BACK, CLOSE-FRONT/PROFILE, expresiones e iluminacion.
